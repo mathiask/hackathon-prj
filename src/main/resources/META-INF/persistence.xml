@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="hackathon" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <shared-cache-mode>NONE</shared-cache-mode>
+
+        <properties>
+            <property name="eclipselink.jdbc.url" value="jdbc:postgresql://localhost:5432/hackathon"/>
+            <property name="eclipselink.jdbc.user" value="hack"/>
+            <property name="eclipselink.jdbc.password" value="hack"/>
+            <property name="eclipselink.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="eclipselink.target-database" value="PostgreSQL"/>
+            <property name="eclipselink.query-results-cache" value="false"/>
+            <property name="eclipselink.refresh" value="true"/>
+            <property name="eclipselink.persistence-context.flush-mode" value="auto"/>
+            <property name="eclipselink.persistence-context.close-on-commit" value="true"/>
+            <property name="eclipselink.cache.shared.default" value="false"/>
+            <!-- set the following to 'FINE' for SQL logging and to 'FINER' for transaction logging-->
+            <property name="eclipselink.logging.level" value="OFF"/>
+            <property name="eclipselink.logging.logger" value="DefaultLogger"/>
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="eclipselink.logging.timestamp" value="true"/>
+            <property name="eclipselink.logging.exceptions" value="true"/>
+            <property name="eclipselink.logging.thread" value="true"/>
+            <property name="javax.persistence.schema-generation.create-database-schemas" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>
