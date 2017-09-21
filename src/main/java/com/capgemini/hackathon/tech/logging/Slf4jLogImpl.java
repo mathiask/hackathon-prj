@@ -1,4 +1,4 @@
-package com.capgemini.hackathon.common.logging;
+package com.capgemini.hackathon.tech.logging;
 
 import org.slf4j.Logger;
 

@@ -1,4 +1,4 @@
-package com.capgemini.hackathon.common.logging;
+package com.capgemini.hackathon.tech.logging;
 
 /**
  * Simple Logging API for HRL based on the SLF4J interface.
