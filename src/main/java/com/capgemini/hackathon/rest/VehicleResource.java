@@ -1,6 +1,6 @@
 package com.capgemini.hackathon.rest;
 
-import com.capgemini.hackathon.entity.VehicelBE;
+import com.capgemini.hackathon.entity.VinBE;
 import com.capgemini.hackathon.tech.logging.Log;
 import com.capgemini.hackathon.tech.logging.LogFactory;
 
@@ -12,6 +12,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 @Stateless
 @Path("/vehicle")
@@ -26,9 +27,16 @@ public class VehicleResource {
 	@Path("{id}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public VehicelBE findVehicle(@PathParam("id") String vin) {
-		return em.find(VehicelBE.class, vin);
+	public VinBE findVehicle(@PathParam("id") int id) {
+		return em.find(VinBE.class, id);
 	}
 
+	@Path("{vin}")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<VinBE> findVehicle(@PathParam("vin") String vin) {
+		return em.createQuery("select vinBE from VinBE vinBE where vinBE.vin=:vinParam")
+				.setParameter("vinParam", vin).getResultList();
+	}
 
 }

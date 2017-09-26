@@ -10,15 +10,24 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-@Table(name = "t_vehicle")
-public class VehicelBE {
+@Table(name = "t_vin")
+public class VinBE {
+
 
     @Id
+    private int id;
+
     private String vin;
 
-    private String color;
+    private String comment;
 
-    private int kw;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getVin() {
         return vin;
@@ -28,19 +37,11 @@ public class VehicelBE {
         this.vin = vin;
     }
 
-    public String getColor() {
-        return color;
+    public String getComment() {
+        return comment;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public int getKw() {
-        return kw;
-    }
-
-    public void setKw(int kw) {
-        this.kw = kw;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }
