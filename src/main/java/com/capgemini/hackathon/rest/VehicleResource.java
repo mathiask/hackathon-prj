@@ -39,4 +39,23 @@ public class VehicleResource {
 				.setParameter("vinParam", vin).getResultList();
 	}
 
+    @Path("allvins")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<VinBE> findAllVehicles() {
+        return em.createQuery("select vinBE from VinBE vinBE")
+                .getResultList();
+    }
+
+    @Path("addVin/{vin}/{comment}")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public VinBE addNewVehicle(@PathParam("vin") String vin, @PathParam("comment") String comment) {
+	    final VinBE newVin = new VinBE();
+	    newVin.setVin(vin);
+	    newVin.setComment(comment);
+        em.persist(newVin);
+        return newVin;
+    }
+
 }
