@@ -1,6 +1,7 @@
 package com.capgemini.hackathon.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,6 +16,7 @@ public class VinBE {
 
 
     @Id
+    @GeneratedValue
     private int id;
 
     private String vin;
