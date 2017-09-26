@@ -11,6 +11,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 @Stateless
 @Path("/vehicle")
@@ -24,6 +25,7 @@ public class VehicleResource {
 
 	@Path("{id}")
 	@GET
+	@Produces(MediaType.APPLICATION_JSON)
 	public VehicelBE findVehicle(@PathParam("id") String vin) {
 		return em.find(VehicelBE.class, vin);
 	}
