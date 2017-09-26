@@ -23,7 +23,7 @@ public class VehicleResource {
 
 
 	@Path("{id}")
-	@Produces("text/plain")
+	@GET
 	public VehicelBE findVehicle(@PathParam("id") String vin) {
 		return em.find(VehicelBE.class, vin);
 	}
