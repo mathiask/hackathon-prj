@@ -7,9 +7,9 @@
         <jta-data-source>java:jboss/datasources/${env.OPENSHIFT_POSTGRESQL_DATASOURCE}</jta-data-source>
         <shared-cache-mode>NONE</shared-cache-mode>
         <properties>
-            <property name="eclipselink.jdbc.url" value="jdbc:postgresql://localhost:5432/hackathon"/>
-            <property name="eclipselink.jdbc.user" value="hack"/>
-            <property name="eclipselink.jdbc.password" value="hack"/>
+            <!--<property name="eclipselink.jdbc.url" value="jdbc:postgresql://localhost:5432/hackathon"/>-->
+            <!--<property name="eclipselink.jdbc.user" value="hack"/>-->
+            <!--<property name="eclipselink.jdbc.password" value="hack"/>-->
             <property name="eclipselink.jdbc.driver" value="org.postgresql.Driver"/>
             <property name="eclipselink.target-database" value="PostgreSQL"/>
             <property name="eclipselink.query-results-cache" value="false"/>
