@@ -24,14 +24,14 @@ public class VehicleResource {
 	EntityManager em;
 
 
-	@Path("{id}")
+	@Path("id/{id}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public VinBE findVehicle(@PathParam("id") int id) {
 		return em.find(VinBE.class, id);
 	}
 
-	@Path("{vin}")
+	@Path("vin/{vin}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<VinBE> findVehicle(@PathParam("vin") String vin) {
