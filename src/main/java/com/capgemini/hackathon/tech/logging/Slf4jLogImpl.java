@@ -14,27 +14,22 @@ class Slf4jLogImpl implements Log {
         slf4jLogger = logger;
     }
 
-    @Override
     public void error(final String message, final Throwable t) {
         slf4jLogger.error(message, t);
     }
 
-    @Override
     public void error(final String message, final Object... params) {
         slf4jLogger.error(message, params);
     }
 
-    @Override
     public void warn(final String message, final Object... params) {
         slf4jLogger.warn(message, params);
     }
 
-    @Override
     public void info(final String message, final Object... params) {
         slf4jLogger.info(message, params);
     }
 
-    @Override
     public void debug(final String message, final Object... params) {
         slf4jLogger.debug(message, params);
     }

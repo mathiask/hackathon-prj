@@ -52,24 +52,13 @@
             <version>1.1.1</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.containers</groupId>
-            <artifactId>jersey-container-servlet-core</artifactId>
-            <version>${version.jersey2}</version>
-            <scope>provided</scope>
-        </dependency>
+
 
         <!-- DB -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>eclipselink</artifactId>
-            <version>${version.eclipselink}</version>
-            <scope>provided</scope> <!-- eclipse link is provided by Payara -->
         </dependency>
 
         <!-- JEE-->
